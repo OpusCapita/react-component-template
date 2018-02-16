@@ -3,7 +3,7 @@ import React from 'react';
 import { expect } from 'chai';
 import { mount } from 'enzyme';
 
-import { Example } from '../../src/index';
+import Example from '../../src/index';
 
 describe('Example component', () => {
   it('is rendered', () => {

@@ -1,1 +1,3 @@
-export Example from './example.component';
+import Example from './example.component';
+
+export default Example;

@@ -15,6 +15,10 @@ if (BUILD_ENV === 'hot') {
   plugins.push('react-hot-loader/babel');
 }
 
+if (BUILD_ENV === 'test') {
+  plugins.push('dynamic-import-node');
+}
+
 module.exports = {
   presets: [
     ['env', presetOptions],

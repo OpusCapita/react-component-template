@@ -1,8 +1,8 @@
 import React from 'react';
-import Component from '../../src/index';
+import { Example } from '../../src/index';
 
 export default function ComponentView() {
   return (
-    <Component />
+    <Example />
   );
 }

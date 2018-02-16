@@ -1,10 +1,1 @@
-import React from 'react';
-
-
-const Component = () => (
-  <div>
-    Component
-  </div>
-);
-
-export default Component;
+export Example from './example.component';

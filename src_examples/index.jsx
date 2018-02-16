@@ -1,12 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, hashHistory } from 'react-router';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import ComponentView from './components/component-view';
 
 import './app.component.scss';
 
 render(
-  <Router history={hashHistory}>
+  <Router>
     <Route path="/" component={ComponentView} />
   </Router>,
   document.getElementById('oc-examples'),

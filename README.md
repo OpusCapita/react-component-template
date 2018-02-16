@@ -3,6 +3,9 @@
 ### Description
 Describe the component here
 
+### Demo
+View the [DEMO](https://opuscapita.github.io/react-component-template)
+
 ### Dependencies
 List relevant dependencies
 

@@ -11,7 +11,7 @@ const flexbugs = require('postcss-flexbugs-fixes');
 const isProd = process.env.NODE_ENV === 'production';
 
 const PATHS = {
-  build: path.join(__dirname, 'examples'),
+  build: path.join(__dirname, 'docs'),
   context: path.join(__dirname, 'src_examples'),
   jsFileName: 'examples.js',
   entry: path.join(__dirname, 'src_examples', 'index.jsx'),

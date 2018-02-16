@@ -12,9 +12,9 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const PATHS = {
   build: path.join(__dirname, 'docs'),
-  context: path.join(__dirname, 'src_examples'),
+  context: path.join(__dirname, 'src_docs'),
   jsFileName: 'examples.js',
-  entry: path.join(__dirname, 'src_examples', 'index.jsx'),
+  entry: path.join(__dirname, 'src_docs', 'index.jsx'),
   root: __dirname,
 };
 

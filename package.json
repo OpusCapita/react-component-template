@@ -10,13 +10,13 @@
   "js:next": "lib/index.js",
   "scripts": {
     "build": "rimraf lib && cross-env NODE_ENV=production BUILD_ENV=es babel ./src -d lib --copy-files",
-    "examples": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "docs": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "dev": "cross-env NODE_ENV=development webpack --progress --colors --watch",
     "hot": "cross-env NODE_ENV=development webpack-dev-server --config webpack.hot.config.js",
-    "lint": "node_modules/.bin/eslint --ext .jsx,.js src/ src_examples/",
+    "lint": "node_modules/.bin/eslint --ext .jsx,.js src/ src_docs/",
     "test": "cross-env NODE_ENV=production BUILD_ENV=test mocha",
     "preversion": "npm run lint && npm test",
-    "version": "npm run build && npm run examples && git add -A lib docs",
+    "version": "npm run build && npm run docs && git add -A lib docs",
     "postversion": "git push && git push --tags"
   },
   "engines": {

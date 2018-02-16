@@ -1,21 +1,19 @@
 ### Development workflow
-* Run `npm run docs`
-* Open `index.html`
+* Make a new branch
+* Run `npm run hot`
+* Open `http://localhost:5555`
 
 ### Development workflow with project using the package
 ##### Link local package to your project
-* Run `npm link` at `oc-common-ui` root to make your local package linkable
-* Run `npm link @opuscapita/oc-common-ui` at project's dir that's using `oc-common-ui` to use local package
+* Run `npm link` at Component root to make your local package linkable
+* Run `npm link @opuscapita/package-name` at project's dir that's using the component to use local package
 ##### Build and watch the package
 * Run `npm run dev` to run webpack in watch mode
 ##### Unlink local package
-* Run `npm unlink @opuscapita/oc-common-ui` at project's dir that's using `oc-common-ui`
-### Development
-* Make a new branch for the changes
-* Use `npm run hot` to develop the component
+* Run `npm unlink @opuscapita/package-name` at project's dir that's using the component
 
 ### Preparing the PR
-* Reset `examples` and `lib` directories to master state
+* Reset `docs` and `lib` directories to master branch state `git checkout master -- docs/* lib/*`
 * Update `CHANGELOG.md` with your changes under the `<next>` header
 * Make a pull request
 

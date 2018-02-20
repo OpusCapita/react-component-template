@@ -3,6 +3,11 @@
 ### Description
 Describe the component here
 
+### Installation
+```
+npm install @opuscapita/react-component-template
+```
+
 ### Demo
 View the [DEMO](https://opuscapita.github.io/react-component-template)
 

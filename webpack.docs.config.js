@@ -99,7 +99,6 @@ const baseConfig = {
         use: [
           'file-loader?name=[name].[ext]',
         ],
-        include: /images/,
       },
     ],
   },

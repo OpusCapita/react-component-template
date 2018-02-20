@@ -5,6 +5,7 @@ import { AppContainer } from 'react-hot-loader';
 import ComponentView from './components/component-view';
 
 import './app.component.scss';
+import './favicon.ico';
 
 const renderApp = (Component) => {
   render(

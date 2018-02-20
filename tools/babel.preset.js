@@ -1,5 +1,5 @@
 const { NODE_ENV, BUILD_ENV } = process.env;
-const presetOptions = BUILD_ENV === 'hot' || BUILD_ENV === 'umd' ?
+const presetOptions = BUILD_ENV === 'hot' || BUILD_ENV === 'umd' || BUILD_ENV === 'es' ?
   { loose: true, modules: false } :
   { loose: true };
 

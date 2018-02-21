@@ -122,6 +122,7 @@ const baseConfig = {
       'node_modules',
     ],
     extensions: ['.js', '.jsx'],
+    mainFields: ['es', 'cjs', 'browser', 'module', 'es:next', 'main'],
   },
 };
 

@@ -9,7 +9,9 @@ export default class ComponentView extends React.PureComponent {
 
   render() {
     return (
-      <Example />
+      <div style={{ padding: '20px' }}>
+        <Example />
+      </div>
     );
   }
 }

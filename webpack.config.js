@@ -46,12 +46,16 @@ const baseConfig = {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              minimize: !!isProd,
+            },
+          },
           {
             loader: 'postcss-loader',
             options: {
               plugins: () => [flexbugs, precss, autoprefixer],
-              minimize: !!isProd,
             },
           },
         ],
@@ -60,12 +64,16 @@ const baseConfig = {
         test: /\.scss$/,
         use: [
           'style-loader',
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              minimize: !!isProd,
+            },
+          },
           {
             loader: 'postcss-loader',
             options: {
               plugins: () => [flexbugs, precss, autoprefixer],
-              minimize: !!isProd,
             },
           },
           'sass-loader',

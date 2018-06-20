@@ -37,7 +37,7 @@
     "react-dom": "15 || 16"
   },
   "devDependencies": {
-    "autoprefixer": "8.6.2",
+    "autoprefixer": "8.6.3",
     "babel-cli": "6.26.0",
     "babel-eslint": "8.2.3",
     "babel-loader": "7.1.4",
@@ -76,7 +76,7 @@
     "postcss-loader": "2.1.5",
     "precss": "3.1.2",
     "progress-bar-webpack-plugin": "1.11.0",
-    "prop-types": "15.6.1",
+    "prop-types": "15.6.2",
     "react": "16.4.1",
     "react-bootstrap": "0.32.1",
     "react-dom": "16.4.1",

@@ -8,7 +8,8 @@
 * Run `npm link` at Component root to make your local package linkable
 * Run `npm link @opuscapita/package-name` at project's dir that's using the component to use local package
 ##### Build and watch the package
-* Run `npm run watch[:cjs, :es, :umd]` to run dev builds in watch mode
+* Remove lib folder and build only umd to avoid main projects webpack to build the linked package dependencies
+* Run `npm run watch:umd` to run only umd dev build in watch mode
 ##### Unlink local package
 * Run `npm unlink @opuscapita/package-name` at project's dir that's using the component
 

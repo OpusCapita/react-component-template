@@ -4,7 +4,7 @@ import './example.component.scss';
 export default class Example extends React.PureComponent {
   render() {
     return (
-      <div>
+      <div id="example-component">
         Example component
       </div>
     );

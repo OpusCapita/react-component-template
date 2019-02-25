@@ -7,6 +7,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const precss = require('precss');
 const flexbugs = require('postcss-flexbugs-fixes');
+const packageConfig = require('./package.json');
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -24,7 +25,7 @@ const PATHS = {
 const baseConfig = {
   context: PATHS.context,
   entry: [
-    'babel-polyfill',
+    '@babel/polyfill',
     PATHS.entry,
   ],
   output: {
@@ -47,20 +48,16 @@ const baseConfig = {
         ],
       },
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: () => [flexbugs, precss, autoprefixer],
-            },
-          },
-        ],
+        test: /\.svg$/,
+        use: [{
+          loader: 'babel-loader',
+        },
+        {
+          loader: 'react-svg-loader',
+        }],
       },
       {
-        test: /\.scss$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
           'style-loader',
           'css-loader',
@@ -74,29 +71,12 @@ const baseConfig = {
         ],
       },
       {
-        test: /\.svg$/,
-        exclude: path.resolve(__dirname, 'node_modules', 'font-awesome'),
-        use: ['babel-loader', 'react-svg-loader'],
-      },
-      {
-        test: /\.svg$/,
-        include: path.resolve(__dirname, 'node_modules', 'font-awesome'),
+        test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
         use: [{
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
             outputPath: 'fonts/',
-          },
-        }],
-      },
-      {
-        test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-        use: [{
-          loader: 'url-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'fonts/',
-            limit: 100,
             mimetype: 'application/font-woff',
           },
         }],
@@ -104,11 +84,10 @@ const baseConfig = {
       {
         test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
         use: [{
-          loader: 'url-loader',
+          loader: 'file-loader',
           options: {
             name: '[name].[ext]',
             outputPath: 'fonts/',
-            limit: 100,
             mimetype: 'application/octet-stream',
           },
         }],
@@ -162,6 +141,7 @@ const baseConfig = {
 * DEVELOPMENT CONFIG
 */
 const devConfig = {
+  mode: 'development',
   devtool: 'eval-source-map',
   plugins: [
     new webpack.DefinePlugin({
@@ -169,8 +149,10 @@ const devConfig = {
         NODE_ENV: JSON.stringify('development'),
       },
     }),
-    new WebpackNotifierPlugin(),
-    new webpack.NamedModulesPlugin(),
+    new WebpackNotifierPlugin({
+      title: packageConfig.name,
+      contentImage: path.join(__dirname, 'src_docs', 'images', 'favicon.ico'),
+    }),
   ],
 };
 
@@ -178,22 +160,12 @@ const devConfig = {
 * PRODUCTION CONFIG
 */
 const prodConfig = {
-  devtool: 'source-map',
+  mode: 'production',
+  devtool: false,
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      filename: 'vendor.bundle.js',
-    }),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
-      },
-    }),
-    new webpack.optimize.ModuleConcatenationPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      output: {
-        comments: false,
       },
     }),
   ],

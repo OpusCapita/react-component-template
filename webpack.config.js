@@ -6,7 +6,7 @@ const precss = require('precss');
 const flexbugs = require('postcss-flexbugs-fixes');
 const packageConfig = require('./package.json');
 
-const libraryName = packageConfig.replace('@opuscapita/', '');
+const libraryName = packageConfig.name.replace('@opuscapita/', '');
 
 const isProd = process.env.NODE_ENV === 'production';
 

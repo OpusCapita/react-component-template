@@ -17,7 +17,7 @@
 4. Update package.json
   - Replace all occurences of `react-component-template` and `React component template` with your component name
 5. Put your component code under `src` and demo code under `src_docs\component`
-6. Test demo with run `npm run hot` -> http://localhost:5555
+6. Develop component and demo with run `npm run hot` -> http://localhost:5555
 7. Update README.md
   - Remove `Creating new component from template` section
   - Replace all occurences of `react-component-template` with `react-your-component-name`

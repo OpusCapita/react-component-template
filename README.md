@@ -4,12 +4,12 @@
 1. Make new empty repository
 2. Create a bare clone of this repository
   ```bash
-  $ git clone --bare https://github.com/opuscapita/react-component-template.git
+  $ git clone --bare https://github.com/opuscapita/react-component-template
   ```
 3. Mirror push to the new repository
   ```bash
-  $ cd old-repository.git
-  $ git push --mirror https://github.com/opuscapita/react-your-component-name-here.git
+  $ cd react-component-template
+  $ git push --mirror https://github.com/opuscapita/react-your-component-name-here
   ```
 4. Remove the temporary local repository you created in step 1.
   ```bash

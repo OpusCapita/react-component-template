@@ -13,6 +13,7 @@
 3. Copy template files recursively to your empty component directory
    ```bash
    $ cp -R * ../react-your-component-name-here
+   $ cp .* ../react-your-component-name-here
    ```
 4. Update package.json
   - Replace all occurences of `react-component-template` and `React component template` with your component name

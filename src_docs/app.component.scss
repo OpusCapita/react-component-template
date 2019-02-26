@@ -11,13 +11,8 @@
 
 @import './flex';
 
-// Enable to include font-awesome
-// ******************************
-// $fa-font-path: '~font-awesome/fonts';
-// @import '~font-awesome/scss/font-awesome.scss';
-
 .oc-margin-bottom {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 #oc-examples {
@@ -25,13 +20,13 @@
 }
 
 .oc-link-active {
-    color: $oc-color-primary-orange !important;
+  color: $oc-color-primary-orange !important;
 }
 
 .oc-burger-orange {
-    background-color: $oc-color-primary-orange;
+  background-color: $oc-color-primary-orange;
 
-    .oc-icon-burger {
-        fill: $oc-color-white;
-    }
+  .oc-icon-burger {
+      fill: $oc-color-white;
+  }
 }

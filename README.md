@@ -1,28 +1,30 @@
 # react-component-template
 
 #### Creating new component from template
-1. Make new empty repository
-2. Create a bare clone of this repository
-  ```bash
-  $ git clone --bare https://github.com/opuscapita/react-component-template.git
-  ```
-3. Mirror push to the new repository
-  ```bash
-  $ cd react-component-template.git
-  $ git push --mirror https://github.com/opuscapita/react-your-component-name-here
-  ```
-4. Remove the temporary local repository you created in step 1.
-  ```bash
-  $ cd ..
-  $ rm -rf react-component-template.git
-  ```
-5. Update README.md
+1. Make new repo for your component and clone it
+   ```bash
+   $ git clone https://github.com/opuscapita/react-your-component-name-here
+   ```
+2. Clone this repository
+   ```bash
+   $ cd ..
+   $ git clone https://github.com/opuscapita/react-component-template
+   ```
+3. Copy template files recursively to your empty component directory
+   ```bash
+   $ cp -R * ../react-your-component-name-here
+   ```
+4. Update package.json
+  - Replace all occurences of `react-component-template` and `React component template` with your component name
+5. Put your component code under `src` and demo code under `src_docs\component`
+6. Test demo with run `npm run hot` -> http://localhost:5555
+7. Update README.md
   - Remove `Creating new component from template` section
   - Replace all occurences of `react-component-template` with `react-your-component-name`
   - Update Description, API and Code example
-6. Update package.json
-  - Replace all occurences of `react-component-template` and `React component template` with your component name
-7. Put your component code under `src` and demo code under `src_docs\component`
+8. Build the component and demo `npm run build` 
+9. Push initial commit to master branch
+10. Enable demo from github repository settings -> HitHub Pages -> Source = `Master branch /docs folder`
 
 ### Description
 Describe the component here

@@ -3,7 +3,7 @@
 * In general follow (https://docs.npmjs.com/getting-started/semantic-versioning) versioning.
 
 ## <next>
-* Added babel-polyfill for DEMO
+* Add entries to be in the next release here
 
-## 0.0.1
+## 1.0.0
 * Initial release

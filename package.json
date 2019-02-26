@@ -1,10 +1,10 @@
 {
   "author": "OpusCapita (www.opuscapita.com)",
   "name": "@opuscapita/react-component-template",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": false,
   "license": "MIT",
-  "description": "OpusCapita react component template",
+  "description": "OpusCapita - React component template",
   "main": "lib/umd/react-component-template.js",
   "cjs": "lib/cjs/index.js",
   "es": "lib/es/index.js",

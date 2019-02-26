@@ -16,10 +16,10 @@ const isProd = process.env.NODE_ENV === 'production';
 const PATHS = {
   build: path.join(__dirname, 'docs'),
   context: path.join(__dirname, 'src_docs'),
-  jsFileName: 'examples.[hash].js',
-  jsChunkFileName: 'examples.[name].[hash].js',
-  cssFileName: 'examples.[hash].css',
-  cssChunkFileName: 'examples.[name].[hash].css',
+  jsFileName: 'examples.js',
+  jsChunkFileName: 'examples.[name].js',
+  cssFileName: 'examples.css',
+  cssChunkFileName: 'examples.[name].css',
   entry: path.join(__dirname, 'src_docs', 'index.jsx'),
   root: __dirname,
 };

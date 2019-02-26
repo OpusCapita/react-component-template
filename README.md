@@ -4,17 +4,17 @@
 1. Make new empty repository
 2. Create a bare clone of this repository
   ```bash
-  $ git clone --bare https://github.com/opuscapita/react-component-template
+  $ git clone --bare https://github.com/opuscapita/react-component-template.git
   ```
 3. Mirror push to the new repository
   ```bash
-  $ cd react-component-template
+  $ cd react-component-template.git
   $ git push --mirror https://github.com/opuscapita/react-your-component-name-here
   ```
 4. Remove the temporary local repository you created in step 1.
   ```bash
   $ cd ..
-  $ rm -rf react-component-template
+  $ rm -rf react-component-template.git
   ```
 5. Update README.md
   - Remove `Creating new component from template` section

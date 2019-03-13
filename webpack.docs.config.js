@@ -109,10 +109,8 @@ const baseConfig = {
     fs: 'empty',
   },
   plugins: [
-    new CleanWebpackPlugin([PATHS.build], {
-      root: PATHS.root,
+    new CleanWebpackPlugin({
       verbose: true,
-      dry: false,
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',

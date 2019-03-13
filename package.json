@@ -36,9 +36,8 @@
   },
   "peerDependencies": {
     "prop-types": "15",
-    "react": "15 || 16",
-    "react-bootstrap": ">=0.32.4",
-    "react-dom": "15 || 16"
+    "react": "16",
+    "react-dom": "16"
   },
   "devDependencies": {
     "@babel/cli": "7.2.3",
@@ -52,7 +51,8 @@
     "@babel/preset-env": "7.3.4",
     "@babel/preset-react": "7.0.0",
     "@babel/register": "7.0.0",
-    "autoprefixer": "9.4.9",
+    "@opuscapita/oc-cm-common-styles": "3.0.0",
+    "autoprefixer": "9.4.10",
     "babel-eslint": "10.0.1",
     "babel-loader": "8.0.5",
     "babel-plugin-dynamic-import-node": "2.2.0",
@@ -60,12 +60,12 @@
     "bootstrap-sass": "3.4.1",
     "chai": "4.2.0",
     "chai-immutable": "1.6.0",
-    "clean-webpack-plugin": "1.0.1",
+    "clean-webpack-plugin": "2.0.0",
     "cross-env": "5.2.0",
-    "css-loader": "2.1.0",
+    "css-loader": "2.1.1",
     "enzyme": "3.9.0",
-    "enzyme-adapter-react-16": "1.10.0",
-    "eslint": "5.14.1",
+    "enzyme-adapter-react-16": "1.11.0",
+    "eslint": "5.15.1",
     "eslint-config-airbnb": "16.1.0",
     "eslint-plugin-import": "2.16.0",
     "eslint-plugin-jsx-a11y": "6.2.1",
@@ -75,7 +75,7 @@
     "html-webpack-plugin": "3.2.0",
     "ignore-styles": "5.0.1",
     "immutable": "3.8.2",
-    "jsdom": "13.2.0",
+    "jsdom": "14.0.0",
     "mini-css-extract-plugin": "0.5.0",
     "mocha": "6.0.2",
     "node-sass": "4.11.0",
@@ -90,16 +90,16 @@
     "react": "16.6.3",
     "react-bootstrap": "0.32.4",
     "react-dom": "16.6.3",
-    "react-hot-loader": "4.7.1",
+    "react-hot-loader": "4.8.0",
     "react-router": "4.3.1",
     "react-router-dom": "4.3.1",
     "react-svg-loader": "2.1.0",
     "rimraf": "2.6.3",
     "sass-loader": "7.1.0",
-    "sinon": "7.2.4",
+    "sinon": "7.2.7",
     "style-loader": "0.23.1",
     "url-loader": "1.1.2",
-    "webpack": "4.29.5",
+    "webpack": "4.29.6",
     "webpack-cli": "3.2.3",
     "webpack-dev-server": "3.2.1",
     "webpack-merge": "4.2.1",
@@ -107,9 +107,7 @@
     "webpack-notifier": "1.7.0",
     "write-file-webpack-plugin": "4.5.0"
   },
-  "dependencies": {
-    "@opuscapita/oc-cm-common-styles": "3.0.0"
-  },
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/OpusCapita/react-component-template.git"

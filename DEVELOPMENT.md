@@ -1,7 +1,7 @@
 ### Development workflow
 * Make a new branch
-* Run `npm run hot` to start examples in watch hot module replacement mode
-* Open `http://localhost:5555`
+* Run `npm run storybook:hot` to start Storybook in the Hot Module Replacement mode
+* Open `http://localhost:6060`
 
 ### Development workflow with project using the package
 ##### Link local package to your project
@@ -14,13 +14,13 @@
 * Run `npm unlink @opuscapita/package-name` at project's dir that's using the component
 
 ### Preparing the PR
-* Reset `docs` and `lib` directories to master branch state `git checkout master -- docs/* lib/*`
+* Reset `lib` directory to master branch state `git checkout master -- lib/*`
 * Update `CHANGELOG.md` with your changes under the `<next>` header
 * Make a pull request
 
 ### Preparing for new version
 * Use `master` branch
-* Add new version header to `CHANGELOG.md` and move everyting from `<next>` there (leave next header empty)
+* Add new version header to `CHANGELOG.md` and move everything from `<next>` there (leave next header empty)
 * Make sure `npm test` and `npm run lint` runs without errors
 
 ### Creating a new release

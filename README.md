@@ -25,7 +25,7 @@
   - Update Description, API and Code example
 8. Build the component and demo `npm run build` 
 9. Push initial commit to master branch
-10. Enable demo from GitHub repository settings (if needed)
+10. Enable demo from GitHub repository settings (if needed, deploy-storybook should do this automatically)
 
 ### Description
 Describe the component here

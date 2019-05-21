@@ -4,6 +4,7 @@
 
 ## <next>
 * Storybook 5 support for component
+* Storybook is now used for demoing purposes
 
 ## 1.0.0
 * Initial release

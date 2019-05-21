@@ -16,16 +16,16 @@
    $ cp .* ../react-your-component-name-here
    ```
 4. Update package.json
-  - Replace all occurences of `react-component-template` and `React component template` with your component name
-5. Put your component code under `src` and demo code under `src_docs\component`
-6. Develop component and demo with run `npm run hot` -> http://localhost:5555
+  - Replace all occurrences of `react-component-template` and `React component template` with your component name
+5. Put your component code under `src` and Storybook demo code under `stories`
+6. Develop component and Storybook demo with `npm run storybook:hot` -> http://localhost:6060
 7. Update README.md
   - Remove `Creating new component from template` section
-  - Replace all occurences of `react-component-template` with `react-your-component-name`
+  - Replace all occurrences of `react-component-template` with `react-your-component-name`
   - Update Description, API and Code example
 8. Build the component and demo `npm run build` 
 9. Push initial commit to master branch
-10. Enable demo from github repository settings -> HitHub Pages -> Source = `Master branch /docs folder`
+10. Enable demo from GitHub repository settings (if needed)
 
 ### Description
 Describe the component here

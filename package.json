@@ -15,19 +15,14 @@
     "build:es": "cross-env NODE_ENV=production BUILD_ENV=es babel src --out-dir lib/es --copy-files --source-maps inline",
     "build:umd": "cross-env NODE_ENV=development BUILD_ENV=umd webpack",
     "build:umd-min": "cross-env NODE_ENV=production BUILD_ENV=umd webpack",
-    "build:docs": "cross-env NODE_ENV=production BUILD_ENV=umd webpack --config webpack.docs.config.js",
-    "watch": "npm-run-all --parallel watch:*",
-    "watch:cjs": "cross-env NODE_ENV=development BUILD_ENV=cjs babel ./src --out-dir lib/cjs --copy-files --watch",
-    "watch:es": "cross-env NODE_ENV=development BUILD_ENV=es babel ./src --out-dir lib/es --copy-files --watch",
-    "watch:umd": "cross-env NODE_ENV=development BUILD_ENV=umd webpack --progress --colors --watch",
-    "hot": "cross-env NODE_ENV=development BUILD_ENV=hot webpack-dev-server --config webpack.docs.hot.config.js",
-    "lint": "node_modules/.bin/eslint --ext .jsx,.js src/ src_docs/",
+    "lint": "node_modules/.bin/eslint --ext .jsx,.js src/",
     "test": "cross-env NODE_ENV=production BUILD_ENV=test mocha",
     "preversion": "npm run lint && npm test",
-    "version": "npm run build && git add -A lib docs",
-    "postversion": "git push && git push --tags",
+    "version": "npm run build && git add -A lib",
+    "postversion": "git push && git push --tags && npm run deploy-storybook",
     "storybook:hot": "start-storybook -p 6060",
-    "storybook:build": "build-storybook"
+    "storybook:build": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "files": [
     "/lib/"
@@ -57,6 +52,7 @@
     "@storybook/addon-knobs": "5.0.1",
     "@storybook/addon-options": "5.0.1",
     "@storybook/react": "5.0.1",
+    "@storybook/storybook-deployer": "2.8.1",
     "autoprefixer": "9.4.10",
     "babel-eslint": "10.0.1",
     "babel-loader": "8.0.5",

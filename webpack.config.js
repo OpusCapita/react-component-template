@@ -135,6 +135,13 @@ const baseConfig = {
       amd: 'react-dom',
       umd: 'react-dom',
     },
+    'styled-components': {
+      root: 'styled-components',
+      commonjs2: 'styled-components',
+      commonjs: 'styled-components',
+      amd: 'styled-components',
+      umd: 'styled-components',
+    },
   },
 };
 
